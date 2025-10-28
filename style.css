@@ -1,0 +1,494 @@
+/* Fuente, colores y estructura */
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #f6f6f6;
+  background-color: #fdfcf8;
+}
+
+header {
+  background: hsl(0, 0%, 0%);
+  text-align: center;
+  padding: 20px;
+  border-bottom: 3px solid #15ba78;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4rem;
+}
+
+.subtitulo {
+  color: #dadada;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/* Sección de bienvenida */
+.introduccion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.maxi {
+  flex: 0 0 auto;
+  width: 180px;
+  margin-left: 0px;   /* se acerca al borde */
+  margin-right: 30px;   /* espacio entre Maxi y el texto */
+
+}
+
+.maxi img {
+  width: 200%;
+  height: auto;
+  animation: flotar 3s ease-in-out infinite;
+  border-radius: 20px;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  0% { transform: translateY(-8px); }
+}
+
+.texto {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.texto p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f2f2f2;
+  text-align: justify;
+  background-color: #ff8c00;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 6px solid #dd7709;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Formulario */
+.formulario {
+  background: #ff801fe4;
+  border-left: 6px solid #ff4810;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.formulario h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ff5900;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+button {
+  background: #000000;
+  color: #fffdfd;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #57c780;
+}
+
+/* Palabras guardadas */
+.lista-palabras {
+  margin-top: 16px;
+  background: #ffa600;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.lista-palabras p {
+  margin: 6px 0;
+}
+
+/* Mensaje de Maxi */
+.mensaje-maxi {
+ background: #ffffff;         /* Fondo durazno */
+  border: 2px solid #ff5900;   /* Borde naranja */
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 16px;
+  text-align: center;
+  color: #000;
+  font-family: "Quicksand", sans-serif;
+  animation: aparecer 0.5s ease-in-out;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5px;
+  background: #08201e;
+  border-top: 3px solid #7fdca4;
+}
+
+.footnote {
+  font-size: 0.9rem;
+  color: #ebebebb3;
+}
+
+.marquesina {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 10px auto;
+  padding: 8px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.marquesina p {
+  display: inline-block;
+  animation: mover 30s linear infinite;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+@keyframes mover {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+  .introduccion {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .maxi {
+    width: 140px;
+  }
+
+  .texto {
+    max-width: 100%;
+  }
+
+  .texto h2 {
+    font-size: 1.5rem;
+  }
+
+  .texto p {
+    font-size: 1rem;
+  }
+}
+.hero {
+  display: flex;
+   align-items: left;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ff5e00;
+  border-left: 6px solid #ae0303;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  gap: 20px;
+}
+
+.cta-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* espacio entre los botones */
+  margin-top: 20px;
+}
+
+.cta-contenedor a {
+  background: #e5b0d2;
+  color: #000;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 4px 4px #8a56c3;
+  transition: transform 0.3s ease;
+}
+
+.cta-contenedor a:hover {
+  transform: scale(1.05);
+}
+
+/* Adaptación responsive */
+@media (max-width: 768px) {
+  .cta-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-contenedor a {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+
+.hero-imagen img {
+  width: 300px;
+  height: auto;
+  animation: flotar 3s ease-in-out infinite;
+  border-radius: 20px;
+}
+
+.hero-texto {
+  flex: 1;
+  min-width: 250px;
+}
+
+.hero-texto h2 {
+  font-size: 1.8rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.hero-texto p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #4e4e4e;
+}
+
+.cta-boton {
+  display: inline-block;
+  background-color: #c4b3f8ae;
+  border-left: 6px solid #5e4ec7;
+  color: #000;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-boton:hover {
+  background-color: #57c780;
+}
+.titulo-centrado {
+  text-align: center;
+}
+.texto h2 {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo a la izquierda, enlaces a la derecha */
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #013d2a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Lista de enlaces horizontal */
+.navbar .nav-links {
+  list-style: none;
+  display: flex; /* Esto pone los <li> en línea */
+  gap: 20px; /* Espacio entre enlaces */
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlaces */
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #82e082; /* Color al pasar el mouse */
+}
+.formulario-titulos {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #000000; /* color del relleno de la letra */
+}
+.album-flotante {
+  text-align: center;
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  backdrop-filter: blur(4px);
+}
+
+.album-flotante h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  color: #4b8f6e;
+  margin-bottom: 20px;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.galeria img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  animation: flotar 5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.card {
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+  margin: 10px;
+  display: inline-block;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #6b21a8;
+}
+.ojo-centro {
+  display: flex;
+  justify-content: center;
+  height:20px; /* o lo que necesites */
+}
+
+.ojo-centro a {
+  font-size: 2rem;
+  color: #6b21a8;
+  text-decoration: none;
+}
+/*Tarjetas interactivas*/
+
+.galeria {
+  display: flex;
+  justify-content: left; /* Centra horizontalmente todo el grupo */
+  flex-wrap: wrap; /* Permite varias filas si hay muchas tarjetas */
+  gap: 30px; /* Espaciado entre tarjetas */
+  margin: 40px 40;
+  padding: 0 40px; /* Margen visual a derecha e izquierda */
+  max-width: 1000px; /* Control del ancho máximo */
+  perspective: 1000px;
+}
+.tarjeta {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.tarjeta img,
+.tarjeta .palabra {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+}
+
+.tarjeta img {
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tarjeta .palabra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: bold;
+  transform: rotateY(180deg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tarjeta.volteada {
+  transform: rotateY(180deg);
+}
+
